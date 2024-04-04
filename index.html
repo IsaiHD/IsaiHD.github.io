@@ -28,11 +28,13 @@
                         </div>
                         <div class="msg-box d-flex">
                             <div class="hire">
-                                <button type="button" class="btn btn-outline-dark">Hire</button>
+                                <a href="https://www.linkedin.com/in/isai-urbina-1aaba1268/" target="_blank" class="btn btn-outline-dark">Contrátame</a>
                             </div>
+                            
                             <div class="msg">
-                                <button type="button" class="btn btn-outline-dark">Message</button>
+                                <a href="mailto:isaiurbina.02@gmail.com" class="btn btn-outline-dark">Mensaje</a>
                             </div>
+                            
                         </div>
                     </div>
                     <div class="con-cover">
@@ -58,7 +60,7 @@
                 </div>
                 <div class="col-md-8">
                     <div class="data-box">
-                        <h2>SOBRE MI</h2>
+                        <h2>SOBRE MÍ</h2>
                         <p>Soy una persona proactiva y apasionada por el aprendizaje continuo. Me encanta enfrentar
                             desafíos y estoy constantemente buscando oportunidades para adquirir nuevos conocimientos.
                             Aprovecho al máximo cada oportunidad para aprender y crecer tanto personal como
@@ -66,11 +68,12 @@
                         <div class="btn-ro row no-margin">
                             <ul class="btn-link">
                                 <li>
-                                    <a href=""><i class="fas fa-paper-plane"></i> Hire Me</a>
+                                    <a href=""><i class="fas fa-paper-plane"></i> Contrátame</a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="fas fa-cloud-download-alt"></i> Curriculum</a>
+                                    <a href="assets\CV\CV.pdf" download><i class="fas fa-cloud-download-alt"></i> Curriculum</a>
                                 </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -97,8 +100,7 @@
                             </div>
                             <div class="col-sm-9 rgbf">
                                 <h5>Universidad San Sebastián</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Actualmente estoy cursando 4to año de Universidad, aprendiendo y nutriéndome de conocimiento.</p>
                             </div>
                         </div>
                         <div class="service no-margin row">
@@ -108,8 +110,7 @@
                             </div>
                             <div class="col-sm-9 rgbf">
                                 <h5>Complejo Educacional Consolidada</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
+                                <p>Cursé enseñanza básica y media en el C.E.C (Complejo Educacional Consolidada).</p>
                             </div>
                         </div>
                     </div>
@@ -157,39 +158,55 @@
                                 <br>
                                 <div class="row cont-row no-margin">
                                     <div class="col-sm-6">
-                                        <input placeholder="Enter Full Name" type="text"
+                                        <input id="nombreCompleto" placeholder="Ingrese su nombre completo" type="text"
                                             class="form-control form-control-sm">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input placeholder="Enter Email Address" type="text"
+                                        <input id="correoElectronico" placeholder="Ingrese su dirección de correo electrónico" type="text"
                                             class="form-control form-control-sm">
                                     </div>
                                 </div>
                                 <div class="row cont-row no-margin">
                                     <div class="col-sm-6">
-                                        <input placeholder="Enter Mobile Number" type="text"
+                                        <input id="numeroTelefono" placeholder="Ingrese su número de teléfono móvil" type="text"
                                             class="form-control form-control-sm">
                                     </div>
-
+                    
                                 </div>
                                 <div class="row cont-row no-margin">
                                     <div class="col-sm-12">
-                                        <textarea placeholder="Enter your Message" class="form-control form-control-sm"
+                                        <textarea id="mensaje" placeholder="Ingrese su mensaje aquí" class="form-control form-control-sm"
                                             rows="10"></textarea>
                                     </div>
-
+                    
                                 </div>
                                 <div class="row cont-row no-margin">
                                     <div class="col-sm-6">
-                                        <button class="btn btn-sm btn-success">Send Message</button>
+                                        <button onclick="rellenarCampos()" class="btn btn-sm btn-success">Enviar Mensaje</button>
                                     </div>
-
+                    
                                 </div>
                             </div>
                         </div>
                     </div>
-
-
+                    
+                    <script>
+                        function rellenarCampos() {
+                            var nombre = document.getElementById('nombreCompleto').value;
+                            var email = document.getElementById('correoElectronico').value;
+                            var telefono = document.getElementById('numeroTelefono').value;
+                            var mensaje = document.getElementById('mensaje').value;
+                            
+                            var linkCorreo = "mailto:isaiurbina.02@gmail.com" + 
+                                             "?subject=Contacto%20desde%20formulario%20web" +
+                                             "&body=Nombre:%20" + nombre + "%0D%0A" +
+                                             "Correo%20electrónico:%20" + email + "%0D%0A" +
+                                             "Teléfono:%20" + telefono + "%0D%0A" +
+                                             "Mensaje:%20" + mensaje;
+                                             
+                            window.location.href = linkCorreo;
+                        }
+                    </script>
                 </div>
             </div>
         </div>
